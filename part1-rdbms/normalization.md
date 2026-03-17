@@ -11,16 +11,16 @@ If a new Sales Representative(Column M) is hired but hasn’t made any sales yet
 
   ## Normalization justification
   By keeping everything in one table the following issues and anomalies may arise:
-  - Redundancy
+  - Redundancy:
      Customer details (name, city, email) repeat for every order.
      Sales rep details repeat for every order.
      If Priya Sharma changes her email, you must update it in every row.
-- Update Anomalies
+- Update Anomalies:
      If you forget to update one row, you’ll have inconsistent data (Priya has two different emails in different orders).
-- Insertion Anomalies
+- Insertion Anomalies:
      You can’t add a new product until it’s ordered.
      You can’t add a new customer until they place an order.
-- Deletion Anomalies
+- Deletion Anomalies:
     If you delete Priya’s last order, you lose her customer record entirely.
     If you delete the last order for “Notebook,” you lose the product record.
 
